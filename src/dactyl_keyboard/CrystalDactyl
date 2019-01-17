@@ -2450,7 +2450,7 @@
 	)
 )
 
-(def dactyl-wrist-rest-right
+(def dactyl-wrist-rest-left
 	(->> dactyl-wrist-rest-right (mirror[1,0,0]))
 )
 ; (def bottom-side-width 5)
@@ -2496,6 +2496,10 @@
 
   (spit "things/Dactyl-wrist-rest-right.scad"
       (write-scad dactyl-wrist-rest-right))
+
+  (spit "things/Dactyl-wrist-rest-left.scad"
+      (write-scad dactyl-wrist-left-right))
+
 
 (spit "things/pro-micro-trrs-mounts.scad"
     (write-scad pro-micro-trrs-mounts))
