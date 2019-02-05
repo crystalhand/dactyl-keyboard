@@ -5,5 +5,4 @@
 .nrepl-*
 
 .lein-*
-/things/*
 /target
