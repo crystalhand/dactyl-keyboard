@@ -2488,37 +2488,26 @@
    )
   )
 
-
-
-(spit "things/Dactyl-top-right.scad"
+(spit "things/dactyl-top-right.scad"
       (write-scad dactyl-top-right))
 
-(spit "things/Dactyl-bottom-right.scad"
+(spit "things/dactyl-bottom-right.scad"
       (write-scad dactyl-bottom-right))
 
-(spit "things/Dactyl-bottom-left.scad"
+(spit "things/dactyl-bottom-left.scad"
       (write-scad dactyl-bottom-left))
 
 (spit "things/side-sample.scad"
       (write-scad side-sample))
 
-(spit "things/Dactyl-top-left.scad"
+(spit "things/dactyl-top-left.scad"
       (write-scad dactyl-top-left))
 
-(spit "things/Dactyl-wrist-rest-right.scad"
+(spit "things/dactyl-wrist-rest-right.scad"
       (write-scad dactyl-wrist-rest-right))
 
-(spit "things/Dactyl-wrist-rest-left.scad"
-      (write-scad dactyl-wrist-left-right))
+(spit "things/dactyl-wrist-rest-left.scad"
+      (write-scad dactyl-wrist-rest-left))
 
 (spit "things/pro-micro-trrs-mounts.scad"
       (write-scad pro-micro-trrs-mounts))
-
-;; (spit "things/lightcycle-matias-bottom-right.scad"
-;;       (write-scad dactyl-bottom-right))
-
-;; (spit "things/lightcycle-matias-top-left.scad"
-;;       (write-scad dactyl-top-left))
-
-;; (spit "things/lightcycle-matias-bottom-left.scad"
-;;     (write-scad dactyl-bottom-left))
