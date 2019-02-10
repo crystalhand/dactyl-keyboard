@@ -1,17 +1,17 @@
-# Crystalhand's Dactyl
-This is my version of the Dactyl with a number of modifications and additions.  I changed a number of constants to variables to make it easier to modify.
+# Dactyl
+This is a fork based on Crystalhand's modifications of the dactyl keyboard. I
+have edited the settings in order to use thumb cluster with only 1u keycaps. I
+will upload a photo in the future.
 
-
-
-Customization for dactyl
-- Ergodox like layout for a wider range of supported keys
-- Curve/slope front back and left/right for alphas and thumb controlled separately
-- Thumb cluster layout
-- Thumb offset and orientation angle
-- Number of rows (5-dactyl or 4-lightcycle)
-- Profile selection (ie high low or custom)
-- Optional detachable wrist rests with customizable height and slope
-
+## Crystalhand's modifications
+Customization for dactyl  
+- Ergodox like layout for a wider range of supported keys  
+- Curve/slope front back and left/right for alphas and thumb controlled separately  
+- Thumb cluster layout  
+- Thumb offset and orientation angle  
+- Number of rows (5-dactyl or 4-lightcycle)  
+- Profile selection (ie high low or custom)  
+- Optional detachable wrist rests with customizable height and slope  
 
 # The Dactyl Keyboard
 The Dactyl is a parameterized, split-hand, concave, columnar, ergonomic keyboard.
@@ -32,12 +32,12 @@ There's a talk about the motivation and design of the Dactyl that helps provide 
 * [Install OpenSCAD](http://www.openscad.org/)
 
 **Generating the design**
-* Run `lein repl`
-* Load the file `(load-file "src/dactyl_keyboard/dactyl.clj")`
-* This will regenerate the `things/*.scad` files
-* Use OpenSCAD to open a `.scad` file.
-* Make changes to design, repeat `load-file`, OpenSCAD will watch for changes and rerender.
-* When done, use OpenSCAD to export STL files
+1. Run `lein repl`  
+2. Load the file `(load-file "src/dactyl_keyboard/dactyl.clj")`  
+3. This will regenerate the `things/*.scad` files  
+4. Use OpenSCAD to open a `.scad` file.  
+5. Make changes to design, repeat `load-file`, OpenSCAD will watch for changes and rerender.  
+6. Use the makefile to generate `.stl` files.  
 
 **Tips**
 * [Some other ways to evaluate the clojure design file](http://stackoverflow.com/a/28213489)
