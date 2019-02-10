@@ -36,7 +36,6 @@
 (def top-z-offset-thumb 0)    ;; Controls thumb offset. Generally speaking
                               ;; should be the same as the z offset default 0
 (def case-text '"")
-                                        ;(def case-text '"https://redd.it/9bd8ip")
 
 ;; Alpha area curve
 (def front-back-curve (deg2rad 15)) ;; Default is 15 front to back curve of
@@ -51,18 +50,18 @@
 
 
 ;; Thumb cluster
-(def thumb-type 2)                        ;; 0=5x 2/1.25u (ie lightcycle
-                                          ;; default) ----- 1=8x1U-----2=
-                                          ;; 2x2u(default)
+(def thumb-type 1)                        ;; 0=5x 2/1.25u (ie lightcycle default)
+                                          ;; 1=8x1U
+                                          ;; 2=2x2u(default)
 (def additional-thumb-x-offset 0)         ;; additional offset for thumb
                                           ;; cluster-0 by default
-(def thumb-front-back-curve (deg2rad 15)) ;; default 15 Key curve
+(def thumb-front-back-curve (deg2rad 25)) ;; default 15 Key curve
 (def thumb-left-right-curve (deg2rad 5))  ;; default 5 Key curve
 (def thumb-extra-width-column 2)          ;; default 2
 (def left-right-thumb-tilt 15)            ;; default 15 degrees Serious down
                                           ;; tilt =-45 which is about the limit
                                           ;; this can go
-(def front-back-thumb-tilt 15)            ;; default 14 for better bottom fit
+(def front-back-thumb-tilt 27)            ;; default 14 for better bottom fit
                                           ;; originally 15
 (def  thumb-extra-width-row 1)            ;; default 1
 (def top-z-offset-thumb 0)                ;; The z offset of the thumb cluster.
@@ -2488,6 +2487,21 @@
    )
   )
 
+;; Shows only top with caps.
+(def top-sample
+  (difference
+   (union
+    dactyl-top-right
+    caps
+    thumbcaps)))
+
+;; Shows only caps
+(def keycaps
+  (difference
+   (union
+    caps
+    thumbcaps)))
+
 (spit "things/dactyl-top-right.scad"
       (write-scad dactyl-top-right))
 
@@ -2500,6 +2514,9 @@
 (spit "things/side-sample.scad"
       (write-scad side-sample))
 
+(spit "things/top-sample.scad"
+      (write-scad top-sample))
+
 (spit "things/dactyl-top-left.scad"
       (write-scad dactyl-top-left))
 
@@ -2511,3 +2528,6 @@
 
 (spit "things/pro-micro-trrs-mounts.scad"
       (write-scad pro-micro-trrs-mounts))
+
+(spit "things/keycaps.scad"
+      (write-scad keycaps))
